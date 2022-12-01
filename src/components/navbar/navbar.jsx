@@ -1,24 +1,20 @@
-import  './navbar.module.css';
+import classes from './navbar.module.css';
+import { Link } from "react-router-dom";
 
-function App() {
+function Navbar() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.navbarContainer}>
+        <Link to = "/friends"
+            style={{textDecoration : "none"}}>
+            Friends
+        </Link>
+
+        <Link to = "/groups"
+            style={{textDecoration : "none"}}>
+            Groups
+        </Link>
     </div>
   );
 }
 
-export default App;
+export default Navbar;
